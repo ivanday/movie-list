@@ -9,13 +9,15 @@ var SearchBar = ({search, setSearch, movies, setMovies, movieDatabase}) => {
     if (searchTerm === '') {
       setMovies(movieDatabase);
     } else{
-      movies.forEach((movie) => {
+      movieDatabase.forEach((movie) => {
         if (movie.title.match(new RegExp(searchTerm, "i"))) {
           console.log(movie.title);
-          newMovieList.push({'title': movie.title});
+          newMovieList.push(movie);
         }
       });
-
+      if (newMovieList.length === 0) {
+        newMovieList.push({'title': 'No movie by that name found'});
+      }
       setMovies(newMovieList);
     }
   }
