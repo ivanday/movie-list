@@ -1,6 +1,7 @@
 import React from 'react';
 import MovieList from './MovieList.jsx';
 import SearchBar from './SearchBar.jsx';
+import AddMovie from './AddMovie.jsx';
 
 const App = (props) => {
   const {useState} = React;
@@ -18,6 +19,11 @@ const App = (props) => {
 
   return (
     <div>
+      <div><AddMovie
+        movieDatabase = {movieDatabase}
+        setMovieDatabase = {setMovieDatabase}
+        setMovies = {setMovies}/>
+      </div>
       <div><SearchBar
         search = {search}
         setSearch = {setSearch}
@@ -25,7 +31,10 @@ const App = (props) => {
         setMovies = {setMovies}
         movieDatabase = {movieDatabase}/>
       </div>
-      <div><MovieList movies = {myMovies} setMovies = {setMovies}/></div>
+      <div><MovieList
+        movies = {myMovies}
+        setMovies = {setMovies}/>
+      </div>
     </div>
     );
 };
