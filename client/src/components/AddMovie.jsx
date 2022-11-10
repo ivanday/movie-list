@@ -10,8 +10,8 @@ var AddMovie = ({movieDatabase, setMovieDatabase, setMovies}) => {
       }
     });
     if (!movieExists) {
-      setMovies([...movieDatabase, {'title': text}])
-      setMovieDatabase([...movieDatabase, {'title': text}]);
+      setMovies([...movieDatabase, {'title': text, 'watched': false}])
+      setMovieDatabase([...movieDatabase, {'title': text, watched: false}]);
     }
     console.log(movieDatabase);
   }

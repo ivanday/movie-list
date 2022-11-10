@@ -7,11 +7,11 @@ const App = (props) => {
   const {useState} = React;
 
   var movies = [
-    {title: 'Mean Girls'},
-    {title: 'Hackers'},
-    {title: 'The Grey'},
-    {title: 'Sunshine'},
-    {title: 'Ex Machina'},
+    // {title: 'Mean Girls'},
+    // {title: 'Hackers'},
+    // {title: 'The Grey'},
+    // {title: 'Sunshine'},
+    // {title: 'Ex Machina'},
   ];
   var [movieDatabase, setMovieDatabase] = useState(movies);
   var [myMovies, setMovies] = useState(movies);
